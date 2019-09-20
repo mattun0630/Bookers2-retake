@@ -9,8 +9,6 @@
       <td><%= @author.introduction %></td>
       <td><%= link_to 'Edit', edit_user_path(current_user.id), class: "btn btn-primary col-xs-12" %></td>
 
-      <p id="notice"><%= notice %></p>
-
 
       <h1>New book</h1>
       <!-- form_for部分 -->
@@ -48,8 +46,8 @@
           <tr>
             <%= link_to @author.name, user_path(@author.id) %>
             <td><%= attachment_image_tag @book_show.user, :profile_image, :fill, 50, 50, format: 'jpeg' %></td>
-            <td>title:<%= @book_show.title %></td>
-            <td>body:<%= @book_show.body %></td>
+            <td><%= @book_show.title %></td>
+            <td><%= @book_show.body %></td>
             <% if @book_show.user_id == current_user.id %>
             <td><%= link_to 'Edit', edit_book_path %></td>
             <td><%= link_to 'Destroy', book_path, method: :delete, data: { confirm: '削除しますか？' } %></td>

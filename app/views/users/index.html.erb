@@ -9,9 +9,6 @@
       <td><%= current_user.introduction %></td>
       <td><%= link_to 'Edit', edit_user_path(current_user.id), class: "btn btn-primary col-xs-12" %></td>
 
-      <% if flash[:notice] %>
-      <p><%= flash[:notice] %></p>
-      <% end %>
 
       <h1>New book</h1>
       <!-- form_for部分 -->
